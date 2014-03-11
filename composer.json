@@ -1,0 +1,25 @@
+{
+    "name": "digigoodz/phpunit-quickstart",
+    "description": "This is the companion project of the tutorial how to start using PHPUnit in a few simple steps.",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Frank Lucht"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "Tutorial\\": "src/"
+        }
+    }
+}
