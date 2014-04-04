@@ -6,7 +6,7 @@
          verbose="true">
   <testsuites>
     <testsuite name="Tutorial Testsuite">
-      <directory suffix=".php">tutorial</directory>
+      <directory suffix=".php">Tutorial</directory>
     </testsuite>
   </testsuites>
 </phpunit>
