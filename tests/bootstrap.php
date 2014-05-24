@@ -3,7 +3,7 @@
  * Basic bootstrap file for PHPUnit
  *
  * @author Frank Lucht
- * @since 13.02.2014
+ * @since 21.04.2014
  * @license For the full copyright and license information, please view the LICENSE file that was distributed with
  * this source code.
  */
