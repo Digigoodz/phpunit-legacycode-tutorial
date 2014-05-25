@@ -12,19 +12,19 @@ class SomeClass
 {
     private $api;
     private $logger;
+    private $db;
 
     public function __construct()
     {
         $this->api = new ThirdPartyApi();
         $this->logger = new Logger();
+        $this->db = new DatabaseLayer();
     }
 
     public function getCustomerStatus($customerId)
     {
-        $db = new DatabaseLayer();
-
         $status = $this->api->getCustomerStatus($customerId);
-        $db->saveCustomerStatus($customerId, $status);
+        $this->db->saveCustomerStatus($customerId, $status);
         $this->logger->log("Customer Status updated");
 
         return $status;
