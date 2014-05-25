@@ -14,11 +14,14 @@ class SomeClass
     private $logger;
     private $db;
 
-    public function __construct()
-    {
-        $this->api = new ThirdPartyApi();
-        $this->logger = new Logger();
-        $this->db = new DatabaseLayer();
+    public function __construct(
+        DatabaseLayer $db,
+        Logger $logger,
+        ThirdPartyApi $api
+    ) {
+        $this->api = $api;
+        $this->logger = $logger;
+        $this->db = $db;
     }
 
     public function getCustomerStatus($customerId)
@@ -28,5 +31,20 @@ class SomeClass
         $this->logger->log("Customer Status updated");
 
         return $status;
+    }
+
+    public function getDb()
+    {
+        return $this->db;
+    }
+
+    public function getApi()
+    {
+        return $this->api;
+    }
+
+    public function getLogger()
+    {
+        return $this->logger;
     }
 }
